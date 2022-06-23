@@ -1,0 +1,17 @@
+version: 2.1
+
+python_docker_image: &python_docker_image
+  docker:
+      - image: python:3.7.3-stretch
+
+jobs:
+
+  hello:
+    <<: *python_docker_image
+    steps:
+      - run: echo "Hello world"
+
+workflows:
+  test:
+    jobs:
+      - hello
