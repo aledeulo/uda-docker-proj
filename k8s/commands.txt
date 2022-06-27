@@ -1,0 +1,8 @@
+## Create EKS cluster
+eksctl create cluster --name eksctl-demo --region=us-east-2 [--profile <profile-name>]
+
+## View cluster creation progress
+eksctl utils describe-stacks --region=us-east-2 --cluster=eksctl-demo [--profile <profile-name>]
+
+## View cluster details after created
+eksctl get cluster --name=eksctl-demo --region=us-east-2 [--profile <profile-name>]
